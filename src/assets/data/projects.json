@@ -1,0 +1,74 @@
+[
+  {
+    "tag": "01 · Fintech Mobile",
+    "name": "Orbit Finance",
+    "role": "Arquitetura mobile + backend serverless",
+    "summary": "App de finanças pessoais com sincronização em tempo real e categorização automática de gastos via IA. Foco em performance offline-first e segurança de dados sensíveis.",
+    "highlights": [
+      "Cache local + sync incremental para uso sem conexão",
+      "Motor de categorização com modelo de IA on-device",
+      "Autenticação biométrica e criptografia de ponta a ponta"
+    ],
+    "stack": ["flutter", "firebase", "supabase", "googlecloud"]
+  },
+  {
+    "tag": "02 · SaaS Analytics",
+    "name": "Northwind Analytics",
+    "role": "Frontend + infraestrutura de deploy",
+    "summary": "Dashboard de insights para e-commerces, com relatórios gerados por IA a partir de dados de vendas. Renderização híbrida para carregamento quase instantâneo.",
+    "highlights": [
+      "Server components e streaming de dados com Next.js",
+      "Relatórios narrativos gerados por IA a partir de métricas",
+      "Deploy contínuo e preview por PR na Vercel"
+    ],
+    "stack": ["nextdotjs", "vercel", "openai", "postgresql"]
+  },
+  {
+    "tag": "03 · Enterprise Back-office",
+    "name": "Helios Admin",
+    "role": "Arquitetura full-stack corporativa",
+    "summary": "Painel administrativo modular para gestão de operações internas, construído para escalar entre times e regras de permissão complexas.",
+    "highlights": [
+      "Arquitetura em módulos lazy-loaded no Angular",
+      "API REST com Spring Boot e regras de negócio isoladas",
+      "Controle de acesso granular por papel e departamento"
+    ],
+    "stack": ["angular", "java", "spring", "postgresql"]
+  },
+  {
+    "tag": "04 · Realtime AI Chat",
+    "name": "Nimbus Chat",
+    "role": "Produto ponta a ponta",
+    "summary": "Plataforma de atendimento com chat em tempo real e um assistente de IA que sugere respostas ao operador humano com base no histórico da conversa.",
+    "highlights": [
+      "Conexões em tempo real via Supabase Realtime",
+      "Sugestões de resposta geradas por IA contextual",
+      "Interface reativa com atualização otimista"
+    ],
+    "stack": ["react", "supabase", "openai", "tailwindcss"]
+  },
+  {
+    "tag": "05 · CRM Comercial",
+    "name": "Aster CRM",
+    "role": "Frontend + integrações",
+    "summary": "CRM leve para equipes comerciais pequenas, com pipeline visual de negociações e automações simples de follow-up.",
+    "highlights": [
+      "Landing e app renderizados com Next.js",
+      "Autenticação e banco de dados via Firebase",
+      "Deploy e domínio gerenciados pela Netlify"
+    ],
+    "stack": ["nextdotjs", "firebase", "netlify"]
+  },
+  {
+    "tag": "06 · ML Ops Platform",
+    "name": "Vertex ML Ops",
+    "role": "Arquitetura de backend e orquestração",
+    "summary": "Plataforma interna para orquestrar pipelines de treinamento e monitoramento de modelos de IA usados por outros times de produto.",
+    "highlights": [
+      "Serviços desacoplados em Java com Spring Boot",
+      "Filas e orquestração de jobs de treinamento de IA",
+      "Observabilidade e alertas de degradação de modelo"
+    ],
+    "stack": ["java", "spring", "openai", "docker"]
+  }
+]

@@ -1,0 +1,27 @@
+<section id="stack" class="relative py-24 border-t border-line/60">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <p mpReveal class="font-mono text-xs text-violet tracking-widest mb-3">// stack</p>
+    <h2 mpReveal [mpRevealDelay]="0.05" class="font-display text-3xl md:text-4xl text-paper mb-4">
+      Ferramentas que uso para construir
+    </h2>
+    <p mpReveal [mpRevealDelay]="0.1" class="text-mist max-w-2xl mb-12">
+      Uma seleção enxuta, escolhida projeto a projeto — não uma lista de tudo que já toquei uma
+      vez.
+    </p>
+
+    <div
+      mpReveal
+      [mpRevealDelay]="0.15"
+      class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4"
+      *ngIf="stack$ | async as icons"
+    >
+      <div
+        *ngFor="let icon of icons"
+        class="flex flex-col items-center gap-2 p-4 rounded-xl border border-line bg-surface/60 hover:border-teal/40 transition-colors"
+      >
+        <img [src]="iconUrl(icon.slug)" [alt]="icon.label" class="w-7 h-7 opacity-70" loading="lazy" />
+        <span class="text-[11px] font-mono text-mist">{{ icon.label }}</span>
+      </div>
+    </div>
+  </div>
+</section>

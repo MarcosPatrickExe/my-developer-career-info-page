@@ -1,0 +1,18 @@
+[
+  { "slug": "flutter", "label": "Flutter" },
+  { "slug": "react", "label": "React" },
+  { "slug": "nextdotjs", "label": "Next.js" },
+  { "slug": "angular", "label": "Angular" },
+  { "slug": "firebase", "label": "Firebase" },
+  { "slug": "openai", "label": "IA" },
+  { "slug": "java", "label": "Java" },
+  { "slug": "spring", "label": "Spring" },
+  { "slug": "supabase", "label": "Supabase" },
+  { "slug": "vercel", "label": "Vercel" },
+  { "slug": "netlify", "label": "Netlify" },
+  { "slug": "typescript", "label": "TypeScript" },
+  { "slug": "tailwindcss", "label": "Tailwind CSS" },
+  { "slug": "postgresql", "label": "PostgreSQL" },
+  { "slug": "googlecloud", "label": "Google Cloud" },
+  { "slug": "docker", "label": "Docker" }
+]
