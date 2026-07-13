@@ -6,39 +6,47 @@
   <canvas #heroCanvas class="absolute inset-0 z-0 opacity-55"></canvas>
   <div class="absolute inset-0 bg-gradient-to-b from-ink/20 via-ink/60 to-ink z-[1]"></div>
 
-  <div
-    class="relative z-10 max-w-6xl mx-auto px-6 md:px-10 w-full pt-24 pb-16 grid md:grid-cols-[auto_1fr] gap-10 items-center"
-  >
-    <div class="flex justify-center md:justify-start">
+  <div class="relative z-10 max-w-6xl mx-auto px-6 md:px-10 w-full pt-20 md:pt-24 pb-14">
+    <p mpReveal class="font-mono text-xs md:text-sm text-teal tracking-widest mb-1">
+      SOFTWARE ARCHITECT — MOBILE · WEB · CLOUD · IA
+    </p>
+
+    <div class="relative flex flex-col items-center text-center">
+      <!-- nome gigante em duas linhas, atrás do recorte da foto -->
       <div
-        class="relative w-36 h-36 md:w-44 md:h-44 rounded-2xl bg-gradient-to-br from-teal/20 to-violet/20 border border-line flex items-center justify-center overflow-hidden"
+        class="pointer-events-none select-none font-display font-bold uppercase leading-[0.82] text-paper/90 glow-text
+               text-[2.75rem] sm:text-[4.25rem] md:text-[5.75rem] lg:text-[7rem]"
+      >
+        <span mpReveal class="block">Marcos</span>
+        <span mpReveal [mpRevealDelay]="0.08" class="block">Patrick</span>
+      </div>
+
+      <!-- recorte da foto, sobrepondo o centro do nome -->
+      <div
+        mpReveal
+        [mpRevealDelay]="0.15"
+        class="relative -mt-12 sm:-mt-16 md:-mt-24 lg:-mt-28 z-10"
       >
         <img
-          src="assets/img/marcos-patrick.jpg"
-          class="w-full h-full object-cover rounded-2xl"
+          src="assets/img/marcos-patrick-cutout.png"
+          class="h-[180px] sm:h-[240px] md:h-[300px] lg:h-[340px] w-auto object-contain drop-shadow-[0_35px_45px_rgba(0,0,0,0.55)]"
           alt="Marcos Patrick"
         />
         <span
-          class="absolute -bottom-3 -right-3 text-[10px] font-mono px-2 py-1 rounded-full bg-surface2 border border-line text-teal"
+          class="absolute bottom-2 right-0 sm:right-2 text-[10px] font-mono px-2 py-1 rounded-full bg-surface2/90 border border-line text-teal backdrop-blur-sm"
         >
           ● disponível
         </span>
       </div>
     </div>
 
-    <div>
-      <p mpReveal class="font-mono text-xs md:text-sm text-teal tracking-widest mb-4">
-        SOFTWARE ARCHITECT — MOBILE · WEB · CLOUD · IA
-      </p>
-      <h1 mpReveal [mpRevealDelay]="0.05" class="font-display text-4xl sm:text-5xl md:text-6xl leading-[1.05] text-paper glow-text">
-        Marcos Patrick
-      </h1>
-      <p mpReveal [mpRevealDelay]="0.1" class="mt-5 max-w-xl text-mist text-base md:text-lg leading-relaxed">
+    <div class="mt-4 flex flex-col items-center text-center">
+      <p mpReveal [mpRevealDelay]="0.2" class="max-w-xl text-mist text-base md:text-lg leading-relaxed">
         Eu desenho e construo produtos digitais de ponta a ponta — de apps móveis em Flutter a
         plataformas web escaláveis com Next.js, Angular e IA embarcada, sustentadas por
         arquiteturas em Java, Spring, Firebase e Supabase.
       </p>
-      <div mpReveal [mpRevealDelay]="0.15" class="mt-8 flex flex-wrap gap-3">
+      <div mpReveal [mpRevealDelay]="0.25" class="mt-6 flex flex-wrap justify-center gap-3">
         <a
           href="#projetos"
           class="text-sm font-mono px-5 py-3 rounded-lg bg-teal text-ink font-medium hover:bg-teal/90 transition-colors"
