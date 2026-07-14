@@ -19,7 +19,13 @@
         *ngFor="let icon of icons"
         class="flex flex-col items-center gap-2 p-4 rounded-xl border border-line bg-surface/60 hover:border-teal/40 transition-colors"
       >
-        <img [src]="iconUrl(icon.slug)" [alt]="icon.label" class="w-7 h-7 opacity-70" loading="lazy" />
+        <img
+          [src]="iconUrl(icon.slug)"
+          [alt]="icon.label"
+          (error)="onIconError($event)"
+          class="w-7 h-7 opacity-70"
+          loading="lazy"
+        />
         <span class="text-[11px] font-mono text-mist">{{ icon.label }}</span>
       </div>
     </div>
