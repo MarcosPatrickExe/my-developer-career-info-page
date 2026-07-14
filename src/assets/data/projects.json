@@ -9,7 +9,11 @@
       "Feed com avisos de live — status ao vivo, datas e horários",
       "Enquetes para a comunidade decidir o próximo jogo da live"
     ],
-    "stack": ["flutter", "firebase", "youtube", "google"]
+    "stack": ["flutter", "firebase", "youtube", "google"],
+    "screenshots": [
+      { "src": "assets/img/ptk-plays/ptk-plays-login.jpg", "alt": "Tela de login do app PTK Plays" },
+      { "src": "assets/img/ptk-plays/ptk-plays-feed.jpg", "alt": "Feed de avisos e enquetes do app PTK Plays" }
+    ]
   },
   {
     "tag": "02 · SaaS Analytics",
@@ -33,7 +37,7 @@
       "API REST com Spring Boot e regras de negócio isoladas",
       "Controle de acesso granular por papel e departamento"
     ],
-    "stack": ["angular", "java", "spring", "postgresql"]
+    "stack": ["angular", "openjdk", "spring", "postgresql"]
   },
   {
     "tag": "04 · Realtime AI Chat",
@@ -69,6 +73,6 @@
       "Filas e orquestração de jobs de treinamento de IA",
       "Observabilidade e alertas de degradação de modelo"
     ],
-    "stack": ["java", "spring", "openai", "docker"]
+    "stack": ["openjdk", "spring", "openai", "docker"]
   }
 ]
