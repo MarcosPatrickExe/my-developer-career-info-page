@@ -1,15 +1,15 @@
 [
   {
-    "tag": "01 · Fintech Mobile",
-    "name": "Orbit Finance",
-    "role": "Arquitetura mobile + backend serverless",
-    "summary": "App de finanças pessoais com sincronização em tempo real e categorização automática de gastos via IA. Foco em performance offline-first e segurança de dados sensíveis.",
+    "tag": "01 · App de Comunidade",
+    "name": "PTK Plays",
+    "role": "Produto mobile ponta a ponta — app + backend",
+    "summary": "App oficial da comunidade do meu canal PTK_Joga no YouTube, multiplataforma (Android, iOS e Web). Reúne os inscritos em um só lugar para aproximá-los de mim: cada um cria sua conta e fica por dentro dos avisos sobre horários e datas das lives.",
     "highlights": [
-      "Cache local + sync incremental para uso sem conexão",
-      "Motor de categorização com modelo de IA on-device",
-      "Autenticação biométrica e criptografia de ponta a ponta"
+      "Autenticação por email/senha e login social com Google e Apple",
+      "Feed com avisos de live — status ao vivo, datas e horários",
+      "Enquetes para a comunidade decidir o próximo jogo da live"
     ],
-    "stack": ["flutter", "firebase", "supabase", "googlecloud"]
+    "stack": ["flutter", "firebase", "youtube", "google"]
   },
   {
     "tag": "02 · SaaS Analytics",
