@@ -17,10 +17,10 @@ import { ScrollRevealDirective } from '../../core/directives/scroll-reveal.direc
         </p>
         <div mpReveal [mpRevealDelay]="0.15" class="flex flex-wrap justify-center gap-4 font-mono text-sm">
           <a
-            href="mailto:contato@marcospatrick.dev"
+            href="mailto:marcospatrick.dev@gmail.com"
             class="px-5 py-3 rounded-lg bg-teal text-ink font-medium hover:bg-teal/90 transition-colors"
           >
-            contato&#64;marcospatrick.dev
+            marcospatrick.dev&#64;gmail.com
           </a>
           <a href="#" class="px-5 py-3 rounded-lg border border-line hover:border-teal/50 transition-colors">
             GitHub
@@ -36,7 +36,7 @@ import { ScrollRevealDirective } from '../../core/directives/scroll-reveal.direc
           class="max-w-6xl mx-auto px-6 md:px-10 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs font-mono text-mist"
         >
           <span>© 2026 Marcos Patrick — construído com Angular · Tailwind · Three.js</span>
-          <span>versão 0.1 — case study inicial</span>
+          <span>versão 0.3</span>
         </div>
       </footer>
     </section>
