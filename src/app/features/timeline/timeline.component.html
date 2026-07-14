@@ -25,39 +25,58 @@
       </div>
 
       <div class="flex flex-col gap-24">
-        <article
-          *ngFor="let p of projects"
-          #cardEl
-          mpReveal
-          class="rounded-2xl p-6 md:p-8 border border-line bg-gradient-to-b from-surface2 to-[#0C121C]"
-        >
-          <p class="font-mono text-xs text-teal tracking-widest mb-3">{{ p.tag }}</p>
-          <h3 class="font-display text-2xl md:text-3xl text-paper mb-1">{{ p.name }}</h3>
-          <p class="text-sm text-violet font-mono mb-5">{{ p.role }}</p>
-          <p class="text-mist leading-relaxed mb-6 max-w-2xl">{{ p.summary }}</p>
+        <div *ngFor="let p of projects; let i = index" class="relative">
+          <!-- glow roxo que acende conforme o card entra em foco no scroll -->
+          <div
+            class="pointer-events-none absolute -inset-10 md:-inset-20 -z-10 rounded-[2.5rem] blur-3xl transition-opacity duration-500 ease-out"
+            [style.opacity]="glowFor(i)"
+            style="background: radial-gradient(ellipse 60% 55% at 50% 35%, rgba(139,124,246,0.55), rgba(45,80,191,0.2) 55%, transparent 75%);"
+          ></div>
 
-          <ul class="space-y-2 mb-7">
-            <li *ngFor="let h of p.highlights" class="flex gap-3 text-sm text-paper/90">
-              <span class="text-teal mt-0.5">▸</span>
-              <span>{{ h }}</span>
-            </li>
-          </ul>
+          <article
+            #cardEl
+            mpReveal
+            class="relative z-10 rounded-2xl p-6 md:p-8 border border-line bg-gradient-to-b from-surface2 to-[#0C121C]"
+          >
+            <p class="font-mono text-xs text-teal tracking-widest mb-3">{{ p.tag }}</p>
+            <h3 class="font-display text-2xl md:text-3xl text-paper mb-1">{{ p.name }}</h3>
+            <p class="text-sm text-violet font-mono mb-5">{{ p.role }}</p>
+            <p class="text-mist leading-relaxed mb-6 max-w-2xl">{{ p.summary }}</p>
 
-          <div class="flex flex-wrap gap-3">
-            <div
-              *ngFor="let s of p.stack"
-              class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface2 border border-line group"
-            >
+            <ul class="space-y-2 mb-7">
+              <li *ngFor="let h of p.highlights" class="flex gap-3 text-sm text-paper/90">
+                <span class="text-teal mt-0.5">▸</span>
+                <span>{{ h }}</span>
+              </li>
+            </ul>
+
+            <div *ngIf="p.screenshots?.length" class="flex flex-wrap gap-5 mb-7">
               <img
-                [src]="iconUrl(s)"
-                [alt]="s"
-                class="w-4 h-4 grayscale opacity-55 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                *ngFor="let shot of p.screenshots"
+                [src]="shot.src"
+                [alt]="shot.alt"
                 loading="lazy"
+                class="w-32 sm:w-40 md:w-44 rounded-[1.4rem] border-2 border-[#050810] shadow-[0_25px_50px_rgba(0,0,0,0.55)] hover:-translate-y-1 transition-transform"
               />
-              <span class="text-xs font-mono text-mist">{{ s }}</span>
             </div>
-          </div>
-        </article>
+
+            <div class="flex flex-wrap gap-3">
+              <div
+                *ngFor="let s of p.stack"
+                class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface2 border border-line group"
+              >
+                <img
+                  [src]="iconUrl(s)"
+                  [alt]="s"
+                  (error)="onIconError($event)"
+                  class="w-4 h-4 grayscale opacity-55 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                  loading="lazy"
+                />
+                <span class="text-xs font-mono text-mist">{{ s }}</span>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
     </div>
   </div>
