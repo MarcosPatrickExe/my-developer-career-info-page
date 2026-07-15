@@ -29,13 +29,64 @@ body {
   text-shadow: 0 0 40px rgba(45, 212, 191, 0.25);
 }
 
-// mockups de tela na timeline: leve inclinação 3D em repouso, achata e levanta no hover
-.mockup-shot {
-  transition: transform 0.4s ease;
+// mockups de tela na timeline: caixa 3D real (tela + lateral do aparelho),
+// inclinada em repouso, achata e levanta no hover
+.phone-mock {
+  perspective: 1400px;
+}
 
-  &:hover {
-    transform: translateY(-8px) scale(1.03) !important;
-  }
+.phone-mock-inner {
+  position: relative;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.45s ease;
+}
+
+.phone-mock.tilt-left .phone-mock-inner {
+  transform: rotateY(24deg);
+}
+
+.phone-mock.tilt-right .phone-mock-inner {
+  transform: rotateY(-24deg);
+}
+
+.phone-mock:hover .phone-mock-inner {
+  transform: rotateY(0deg) translateY(-8px) scale(1.04) !important;
+}
+
+.phone-face {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1.4rem;
+  border: 2px solid #050810;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.55);
+  position: relative;
+}
+
+// face lateral do aparelho: uma tira fina dobrada 90° a partir da borda da tela,
+// só fica visível por causa da inclinação em rotateY do pai
+.phone-side {
+  position: absolute;
+  top: 2px;
+  width: 12px;
+  height: calc(100% - 4px);
+  border-radius: 0 0.75rem 0.75rem 0;
+  background: linear-gradient(to right, #2b2b34, #050810 55%, #000);
+}
+
+.phone-side--right {
+  left: 100%;
+  transform-origin: 0 50%;
+  transform: rotateY(90deg);
+}
+
+.phone-side--left {
+  right: 100%;
+  transform-origin: 100% 50%;
+  transform: rotateY(-90deg);
+  background: linear-gradient(to left, #2b2b34, #050810 55%, #000);
+  border-radius: 0.75rem 0 0 0.75rem;
 }
 
 // textura sutil de grão sobre toda a página
