@@ -29,6 +29,15 @@ body {
   text-shadow: 0 0 40px rgba(45, 212, 191, 0.25);
 }
 
+// mockups de tela na timeline: leve inclinação 3D em repouso, achata e levanta no hover
+.mockup-shot {
+  transition: transform 0.4s ease;
+
+  &:hover {
+    transform: translateY(-8px) scale(1.03) !important;
+  }
+}
+
 // textura sutil de grão sobre toda a página
 .grain {
   position: fixed;
