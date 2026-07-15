@@ -50,13 +50,20 @@
               </li>
             </ul>
 
-            <div *ngIf="p.screenshots?.length" class="flex flex-wrap gap-5 mb-7">
+            <div
+              *ngIf="p.screenshots?.length"
+              class="flex flex-nowrap justify-center items-end gap-3 sm:gap-6 mb-9 overflow-x-auto py-6"
+              style="perspective: 1200px;"
+            >
               <img
-                *ngFor="let shot of p.screenshots"
+                *ngFor="let shot of p.screenshots; let si = index"
                 [src]="shot.src"
                 [alt]="shot.alt"
                 loading="lazy"
-                class="w-32 sm:w-40 md:w-44 rounded-[1.4rem] border-2 border-[#050810] shadow-[0_25px_50px_rgba(0,0,0,0.55)] hover:-translate-y-1 transition-transform"
+                class="mockup-shot w-24 sm:w-32 md:w-36 shrink-0 rounded-[1.4rem] border-2 border-[#050810] shadow-[0_25px_50px_rgba(0,0,0,0.55)]"
+                [style.transform]="si % 2 === 0
+                  ? 'rotateY(14deg) translateY(6px)'
+                  : 'rotateY(-14deg) translateY(-6px)'"
               />
             </div>
 
