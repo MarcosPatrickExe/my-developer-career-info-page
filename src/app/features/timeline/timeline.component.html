@@ -52,19 +52,20 @@
 
             <div
               *ngIf="p.screenshots?.length"
-              class="flex flex-nowrap justify-center items-end gap-3 sm:gap-6 mb-9 overflow-x-auto py-6"
-              style="perspective: 1200px;"
+              class="flex flex-nowrap justify-center items-end gap-8 sm:gap-10 mb-9 overflow-x-auto py-6"
+              style="perspective: 1400px;"
             >
-              <img
+              <div
                 *ngFor="let shot of p.screenshots; let si = index"
-                [src]="shot.src"
-                [alt]="shot.alt"
-                loading="lazy"
-                class="mockup-shot w-24 sm:w-32 md:w-36 shrink-0 rounded-[1.4rem] border-2 border-[#050810] shadow-[0_25px_50px_rgba(0,0,0,0.55)]"
-                [style.transform]="si % 2 === 0
-                  ? 'rotateY(14deg) translateY(6px)'
-                  : 'rotateY(-14deg) translateY(-6px)'"
-              />
+                class="phone-mock shrink-0 w-24 sm:w-32 md:w-36"
+                [class.tilt-left]="si % 2 === 0"
+                [class.tilt-right]="si % 2 !== 0"
+              >
+                <div class="phone-mock-inner">
+                  <img [src]="shot.src" [alt]="shot.alt" loading="lazy" class="phone-face" />
+                  <div class="phone-side" [class.phone-side--right]="si % 2 === 0" [class.phone-side--left]="si % 2 !== 0"></div>
+                </div>
+              </div>
             </div>
 
             <div class="flex flex-wrap gap-3">
