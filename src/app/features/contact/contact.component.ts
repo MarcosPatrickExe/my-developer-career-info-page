@@ -36,7 +36,7 @@ import { ScrollRevealDirective } from '../../core/directives/scroll-reveal.direc
           class="max-w-6xl mx-auto px-6 md:px-10 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs font-mono text-mist"
         >
           <span>© 2026 Marcos Patrick — construído com Angular · Tailwind · Three.js</span>
-          <span>versão 0.6</span>
+          <span>versão 0.7</span>
         </div>
       </footer>
     </section>
