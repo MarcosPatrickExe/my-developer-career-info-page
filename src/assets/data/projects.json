@@ -16,16 +16,16 @@
     ]
   },
   {
-    "tag": "02 · SaaS Analytics",
-    "name": "Northwind Analytics",
-    "role": "Frontend + infraestrutura de deploy",
-    "summary": "Dashboard de insights para e-commerces, com relatórios gerados por IA a partir de dados de vendas. Renderização híbrida para carregamento quase instantâneo.",
+    "tag": "02 · Sistema de Saúde",
+    "name": "APLIS",
+    "role": "Frontend React + dois backends poliglotas",
+    "summary": "Sistema fullstack para gestão de médicos e pacientes, com deploy real em produção numa VPS. Arquitetura poliglota: dois backends independentes — um em Laravel, outro em Node.js — unificados sob um único domínio e consumidos por um frontend em React.",
     "highlights": [
-      "Server components e streaming de dados com Next.js",
-      "Relatórios narrativos gerados por IA a partir de métricas",
-      "Deploy contínuo e preview por PR na Vercel"
+      "Dois backends isolados por responsabilidade: Laravel (PHP) para médicos, Node/Express para pacientes",
+      "Nginx como proxy reverso unificando frontend e as duas APIs sob um único domínio, evitando CORS",
+      "Deploy em VPS com PM2 gerenciando os processos Node — reinício automático e persistência após reboot"
     ],
-    "stack": ["nextdotjs", "vercel", "openai", "postgresql"]
+    "stack": ["react", "vite", "php", "laravel", "nodedotjs", "express", "mysql", "nginx", "postman"]
   },
   {
     "tag": "03 · Enterprise Back-office",
