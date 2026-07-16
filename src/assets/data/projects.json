@@ -13,7 +13,8 @@
     "screenshots": [
       { "src": "assets/img/ptk-plays/ptk-plays-login.jpg", "alt": "Tela de login do app PTK Plays" },
       { "src": "assets/img/ptk-plays/ptk-plays-feed.jpg", "alt": "Feed de avisos e enquetes do app PTK Plays" }
-    ]
+    ],
+    "repoUrl": "https://github.com/MarcosPatrickExe/PTK_plays"
   },
   {
     "tag": "02 · Sistema de Saúde",
@@ -25,7 +26,8 @@
       "Nginx como proxy reverso unificando frontend e as duas APIs sob um único domínio, evitando CORS",
       "Deploy em VPS com PM2 gerenciando os processos Node — reinício automático e persistência após reboot"
     ],
-    "stack": ["react", "vite", "php", "laravel", "nodedotjs", "express", "mysql", "nginx", "postman"]
+    "stack": ["react", "vite", "php", "laravel", "nodedotjs", "express", "mysql", "nginx", "postman"],
+    "repoUrl": "https://github.com/MarcosPatrickExe/apLIS-desenvolvedor-jr"
   },
   {
     "tag": "03 · Enterprise Back-office",
