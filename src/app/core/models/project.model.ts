@@ -13,6 +13,8 @@ export interface Project {
   stack: string[];
   /** mockups opcionais do produto, exibidos como thumbnails no card */
   screenshots?: ProjectScreenshot[];
+  /** link do repositório no GitHub, quando o projeto é público */
+  repoUrl?: string;
 }
 
 export interface StackIcon {
