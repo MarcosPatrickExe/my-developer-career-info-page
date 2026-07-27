@@ -9,7 +9,7 @@
       "Feed com avisos de live — status ao vivo, datas e horários",
       "Enquetes para a comunidade decidir o próximo jogo da live"
     ],
-    "stack": ["flutter", "firebase", "youtube", "google"],
+    "stack": ["flutter", "dart", "firebase", "firestore", "fcm", "android", "apple", "youtube", "google"],
     "screenshots": [
       { "src": "assets/img/ptk-plays/ptk-plays-login.jpg", "alt": "Tela de login do app PTK Plays" },
       { "src": "assets/img/ptk-plays/ptk-plays-feed.jpg", "alt": "Feed de avisos e enquetes do app PTK Plays" }
