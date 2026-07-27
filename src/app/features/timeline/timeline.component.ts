@@ -47,8 +47,19 @@ export class TimelineComponent implements OnInit, AfterViewInit {
       '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#7C8A99" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M8 12h8M12 8v8"/></svg>'
     );
 
+  /** rótulos amigáveis para slugs sem nome de marca 1:1 (produtos Firebase, iOS via ícone da Apple) */
+  private readonly stackLabels: Record<string, string> = {
+    firestore: 'Firebase Firestore',
+    fcm: 'Firebase Cloud Messaging',
+    apple: 'iOS',
+  };
+
   iconUrl(slug: string): string {
     return `https://cdn.simpleicons.org/${slug}/E7ECEF`;
+  }
+
+  stackLabel(slug: string): string {
+    return this.stackLabels[slug] ?? slug;
   }
 
   /** troca por um ícone genérico se o slug não existir mais no simpleicons */
