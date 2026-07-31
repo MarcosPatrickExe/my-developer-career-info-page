@@ -30,51 +30,55 @@
     "repoUrl": "https://github.com/MarcosPatrickExe/apLIS-desenvolvedor-jr"
   },
   {
-    "tag": "03 · Enterprise Back-office",
-    "name": "Helios Admin",
-    "role": "Arquitetura full-stack corporativa",
-    "summary": "Painel administrativo modular para gestão de operações internas, construído para escalar entre times e regras de permissão complexas.",
+    "tag": "03 · Plataforma Educacional",
+    "name": "Educatoon",
+    "role": "Frontend React + dois backends poliglotas",
+    "summary": "Plataforma web de gestão escolar com fluxos de login, cadastro, seleção de unidade e conteúdo gamificado, sustentada por dois backends independentes — um em Java com Spring Boot, outro em Node.js com TypeORM.",
     "highlights": [
-      "Arquitetura em módulos lazy-loaded no Angular",
-      "API REST com Spring Boot e regras de negócio isoladas",
-      "Controle de acesso granular por papel e departamento"
+      "Fluxos de login, cadastro, seleção de unidade (HQ) e de perfil de usuário",
+      "Dois backends isolados: Spring Boot (JPA/JDBC) e Node.js (TypeORM, migrations e repositories)",
+      "Seção de conteúdo gamificado (tirinhas) e categorização de atividades"
     ],
-    "stack": ["angular", "openjdk", "spring", "postgresql"]
+    "stack": ["react", "typescript", "bootstrap", "openjdk", "spring", "nodedotjs", "express", "typeorm", "postgresql"],
+    "repoUrl": "https://github.com/MarcosPatrickExe/educatoon_frontend"
   },
   {
-    "tag": "04 · Realtime AI Chat",
-    "name": "Nimbus Chat",
-    "role": "Produto ponta a ponta",
-    "summary": "Plataforma de atendimento com chat em tempo real e um assistente de IA que sugere respostas ao operador humano com base no histórico da conversa.",
+    "tag": "04 · App de Comunidade Gamer",
+    "name": "Nerdworking",
+    "role": "App mobile Flutter",
+    "summary": "Espaço para gamers, otakus e geeks conversarem e compartilharem experiências sobre jogos e animes, com arquitetura em camadas (domain, data e view).",
     "highlights": [
-      "Conexões em tempo real via Supabase Realtime",
-      "Sugestões de resposta geradas por IA contextual",
-      "Interface reativa com atualização otimista"
+      "Arquitetura em camadas: domain (regras de negócio e modelos), data e view",
+      "Gerenciamento de estado com Provider e formulários com máscara de input",
+      "Comunicação com API REST via pacote http"
     ],
-    "stack": ["react", "supabase", "openai", "tailwindcss"]
+    "stack": ["flutter", "dart"],
+    "repoUrl": "https://github.com/MarcosPatrickExe/nerdworking"
   },
   {
-    "tag": "05 · CRM Comercial",
-    "name": "Aster CRM",
-    "role": "Frontend + integrações",
-    "summary": "CRM leve para equipes comerciais pequenas, com pipeline visual de negociações e automações simples de follow-up.",
+    "tag": "05 · Jogo Educacional Interativo",
+    "name": "Gestalt Laws Game",
+    "role": "Frontend React + Firebase — projeto em equipe",
+    "summary": "Software interativo que ensina as 8 leis da teoria da Gestalt através de mini-jogos, desenvolvido em equipe para a disciplina de Cognição e Tecnologias Digitais, com deploy público ativo.",
     "highlights": [
-      "Landing e app renderizados com Next.js",
-      "Autenticação e banco de dados via Firebase",
-      "Deploy e domínio gerenciados pela Netlify"
+      "Mini-jogos interativos para cada uma das 8 leis da teoria da Gestalt",
+      "Armazenamento do progresso e do tempo de conclusão no Firebase Firestore",
+      "Projeto em equipe de 4 integrantes, com deploy público ativo"
     ],
-    "stack": ["nextdotjs", "firebase", "netlify"]
+    "stack": ["react", "firebase", "firestore", "bootstrap"],
+    "repoUrl": "https://github.com/MarcosPatrickExe/gestalt-laws-game"
   },
   {
-    "tag": "06 · ML Ops Platform",
-    "name": "Vertex ML Ops",
-    "role": "Arquitetura de backend e orquestração",
-    "summary": "Plataforma interna para orquestrar pipelines de treinamento e monitoramento de modelos de IA usados por outros times de produto.",
+    "tag": "06 · Microsserviços de Entrega",
+    "name": "VaiEntrega",
+    "role": "Arquitetura de microsserviços Java/Spring Boot",
+    "summary": "Conjunto de microsserviços para gestão de entregadores (Courier-Management) e rastreamento de encomendas (Delivery-Tracking), construído com Spring Boot 3 e Java 21.",
     "highlights": [
-      "Serviços desacoplados em Java com Spring Boot",
-      "Filas e orquestração de jobs de treinamento de IA",
-      "Observabilidade e alertas de degradação de modelo"
+      "Dois microsserviços independentes: gestão de entregadores e rastreamento de encomendas",
+      "Spring Data JPA + PostgreSQL para persistência, com Bean Validation",
+      "Spring Boot 3.5 e Java 21, usando Lombok para reduzir boilerplate"
     ],
-    "stack": ["openjdk", "spring", "openai", "docker"]
+    "stack": ["openjdk", "spring", "postgresql"],
+    "repoUrl": "https://github.com/MarcosPatrickExe/Courier-Management"
   }
 ]
