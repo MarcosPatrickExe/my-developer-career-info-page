@@ -15,25 +15,26 @@
       <!-- nome gigante em duas linhas, atrás do recorte da foto -->
       <div
         class="pointer-events-none select-none font-display font-bold uppercase leading-[0.82] text-paper/90 glow-text
-               text-[2.75rem] sm:text-[4.25rem] md:text-[5.75rem] lg:text-[7rem]"
+               text-[3.25rem] sm:text-[4.75rem] md:text-[6.5rem] lg:text-[8rem]"
       >
         <span mpReveal class="block">Marcos</span>
         <span mpReveal [mpRevealDelay]="0.08" class="block">Patrick</span>
       </div>
 
-      <!-- recorte da foto, sobrepondo o centro do nome -->
+      <!-- recorte da foto, sobrepondo o centro do nome; largura relativa à tela + sombreamento inferior -->
       <div
         mpReveal
         [mpRevealDelay]="0.15"
-        class="relative -mt-12 sm:-mt-16 md:-mt-24 lg:-mt-28 z-10"
+        class="relative -mt-6 sm:-mt-8 md:-mt-10 lg:-mt-12 z-10 w-[64vw] sm:w-[56vw] md:w-[34vw] lg:w-[28vw] max-w-[460px]"
       >
         <img
           src="assets/img/marcos-patrick-cutout.png"
-          class="h-[180px] sm:h-[240px] md:h-[300px] lg:h-[340px] w-auto object-contain drop-shadow-[0_35px_45px_rgba(0,0,0,0.55)]"
+          class="w-full h-auto object-contain drop-shadow-[0_35px_45px_rgba(0,0,0,0.55)]"
           alt="Marcos Patrick"
         />
+        <div class="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ink via-ink/70 to-transparent"></div>
         <span
-          class="absolute bottom-2 right-0 sm:right-2 text-[10px] font-mono px-2 py-1 rounded-full bg-surface2/90 border border-line text-teal backdrop-blur-sm"
+          class="absolute bottom-3 right-1 sm:right-3 text-[10px] font-mono px-2 py-1 rounded-full bg-surface2/90 border border-line text-teal backdrop-blur-sm"
         >
           ● disponível
         </span>
