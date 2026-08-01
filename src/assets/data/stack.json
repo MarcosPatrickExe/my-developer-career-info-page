@@ -4,7 +4,7 @@
   { "slug": "nextdotjs", "label": "Next.js" },
   { "slug": "angular", "label": "Angular" },
   { "slug": "firebase", "label": "Firebase" },
-  { "slug": "openai", "label": "IA" },
+  { "slug": "anthropic", "label": "IA" },
   { "slug": "openjdk", "label": "Java" },
   { "slug": "spring", "label": "Spring" },
   { "slug": "supabase", "label": "Supabase" },
