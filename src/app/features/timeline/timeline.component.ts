@@ -62,8 +62,15 @@ export class TimelineComponent implements OnInit, AfterViewInit {
     express: 'Express',
   };
 
+  /** produtos sem ícone de marca próprio no simpleicons — reaproveita o ícone da marca-mãe */
+  private readonly iconSlugOverrides: Record<string, string> = {
+    firestore: 'firebase',
+    fcm: 'firebase',
+  };
+
   iconUrl(slug: string): string {
-    return `https://cdn.simpleicons.org/${slug}/E7ECEF`;
+    const resolvedSlug = this.iconSlugOverrides[slug] ?? slug;
+    return `https://cdn.simpleicons.org/${resolvedSlug}/E7ECEF`;
   }
 
   stackLabel(slug: string): string {
