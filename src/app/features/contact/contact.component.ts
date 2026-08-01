@@ -22,7 +22,12 @@ import { ScrollRevealDirective } from '../../core/directives/scroll-reveal.direc
           >
             marcospatrick.dev&#64;gmail.com
           </a>
-          <a href="#" class="px-5 py-3 rounded-lg border border-line hover:border-teal/50 transition-colors">
+          <a
+            href="https://github.com/MarcosPatrickExe"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-5 py-3 rounded-lg border border-line hover:border-teal/50 transition-colors"
+          >
             GitHub
           </a>
           <a href="#" class="px-5 py-3 rounded-lg border border-line hover:border-teal/50 transition-colors">
@@ -36,7 +41,7 @@ import { ScrollRevealDirective } from '../../core/directives/scroll-reveal.direc
           class="max-w-6xl mx-auto px-6 md:px-10 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs font-mono text-mist"
         >
           <span>© 2026 Marcos Patrick — construído com Angular · Tailwind · Three.js</span>
-          <span>versão 0.9</span>
+          <span>versão 1.0</span>
         </div>
       </footer>
     </section>
