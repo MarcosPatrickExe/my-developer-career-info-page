@@ -26,7 +26,7 @@ export class StackComponent implements OnInit {
   }
 
   iconUrl(slug: string): string {
-    return `https://cdn.simpleicons.org/${slug}/E7ECEF`;
+    return `https://cdn.simpleicons.org/${slug}`;
   }
 
   /** troca por um ícone genérico se o slug não existir mais no simpleicons */
