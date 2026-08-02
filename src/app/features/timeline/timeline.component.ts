@@ -70,7 +70,7 @@ export class TimelineComponent implements OnInit, AfterViewInit {
 
   iconUrl(slug: string): string {
     const resolvedSlug = this.iconSlugOverrides[slug] ?? slug;
-    return `https://cdn.simpleicons.org/${resolvedSlug}/E7ECEF`;
+    return `https://cdn.simpleicons.org/${resolvedSlug}`;
   }
 
   stackLabel(slug: string): string {
