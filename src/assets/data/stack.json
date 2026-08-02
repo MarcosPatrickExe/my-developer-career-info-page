@@ -17,5 +17,6 @@
   { "slug": "docker", "label": "Docker" },
   { "slug": "n8n", "label": "n8n" },
   { "slug": "chatgpt", "label": "ChatGPT" },
-  { "slug": "googlegemini", "label": "Google Gemini" }
+  { "slug": "googlegemini", "label": "Google Gemini" },
+  { "slug": "codex", "label": "Codex" }
 ]
