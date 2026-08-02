@@ -53,7 +53,6 @@ export class TimelineComponent implements OnInit, AfterViewInit {
     fcm: 'Firebase Cloud Messaging',
     apple: 'iOS',
     nodedotjs: 'Node.js',
-    openjdk: 'Java',
     typeorm: 'TypeORM',
     postgresql: 'PostgreSQL',
     typescript: 'TypeScript',
