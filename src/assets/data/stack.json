@@ -4,8 +4,8 @@
   { "slug": "nextdotjs", "label": "Next.js" },
   { "slug": "angular", "label": "Angular" },
   { "slug": "firebase", "label": "Firebase" },
-  { "slug": "anthropic", "label": "IA" },
-  { "slug": "openjdk", "label": "Java" },
+  { "slug": "claude", "label": "Claude Code" },
+  { "slug": "java", "label": "Java" },
   { "slug": "spring", "label": "Spring" },
   { "slug": "supabase", "label": "Supabase" },
   { "slug": "vercel", "label": "Vercel" },
@@ -14,5 +14,8 @@
   { "slug": "tailwindcss", "label": "Tailwind CSS" },
   { "slug": "postgresql", "label": "PostgreSQL" },
   { "slug": "googlecloud", "label": "Google Cloud" },
-  { "slug": "docker", "label": "Docker" }
+  { "slug": "docker", "label": "Docker" },
+  { "slug": "n8n", "label": "n8n" },
+  { "slug": "chatgpt", "label": "ChatGPT" },
+  { "slug": "googlegemini", "label": "Google Gemini" }
 ]
