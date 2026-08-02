@@ -21,12 +21,17 @@ export class StackComponent implements OnInit {
       '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#7C8A99" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M8 12h8M12 8v8"/></svg>'
     );
 
+  /** marcas sem ícone confiável no simpleicons — asset local hospedado no próprio projeto */
+  private readonly localIcons: Record<string, string> = {
+    codex: 'assets/img/icons/codex.png',
+  };
+
   ngOnInit(): void {
     this.stack$ = this.projectsService.getStack();
   }
 
   iconUrl(slug: string): string {
-    return `https://cdn.simpleicons.org/${slug}`;
+    return this.localIcons[slug] ?? `https://cdn.simpleicons.org/${slug}`;
   }
 
   /** troca por um ícone genérico se o slug não existir mais no simpleicons */
