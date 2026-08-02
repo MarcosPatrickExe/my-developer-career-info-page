@@ -26,16 +26,30 @@ import { ScrollRevealDirective } from '../../core/directives/scroll-reveal.direc
             href="https://github.com/MarcosPatrickExe"
             target="_blank"
             rel="noopener noreferrer"
-            class="px-5 py-3 rounded-lg border border-line hover:border-teal/50 transition-colors"
+            class="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-line hover:border-teal/50 transition-colors"
           >
+            <img
+              [src]="iconUrl('github')"
+              alt="GitHub"
+              (error)="onIconError($event)"
+              class="w-4 h-4"
+              loading="lazy"
+            />
             GitHub
           </a>
           <a
             href="https://www.linkedin.com/in/marcospatrickk"
             target="_blank"
             rel="noopener noreferrer"
-            class="px-5 py-3 rounded-lg border border-line hover:border-teal/50 transition-colors"
+            class="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-line hover:border-teal/50 transition-colors"
           >
+            <img
+              [src]="iconUrl('linkedin')"
+              alt="LinkedIn"
+              (error)="onIconError($event)"
+              class="w-4 h-4"
+              loading="lazy"
+            />
             LinkedIn
           </a>
         </div>
@@ -46,10 +60,27 @@ import { ScrollRevealDirective } from '../../core/directives/scroll-reveal.direc
           class="max-w-6xl mx-auto px-6 md:px-10 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs font-mono text-mist"
         >
           <span>© 2026 Marcos Patrick — construído com Angular · Tailwind · Three.js</span>
-          <span>versão 1.1</span>
+          <span>versão 1.2</span>
         </div>
       </footer>
     </section>
   `,
 })
-export class ContactComponent {}
+export class ContactComponent {
+  private readonly fallbackIcon =
+    'data:image/svg+xml,' +
+    encodeURIComponent(
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#7C8A99" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M8 12h8M12 8v8"/></svg>'
+    );
+
+  iconUrl(slug: string): string {
+    return `https://cdn.simpleicons.org/${slug}`;
+  }
+
+  /** troca por um ícone genérico se o slug não existir mais no simpleicons */
+  onIconError(event: Event): void {
+    const img = event.target as HTMLImageElement;
+    img.onerror = null;
+    img.src = this.fallbackIcon;
+  }
+}
