@@ -39,7 +39,7 @@
       "Dois backends isolados: Spring Boot (JPA/JDBC) e Node.js (TypeORM, migrations e repositories)",
       "Seção de conteúdo gamificado (tirinhas) e categorização de atividades"
     ],
-    "stack": ["react", "typescript", "bootstrap", "openjdk", "spring", "nodedotjs", "express", "typeorm", "postgresql"],
+    "stack": ["react", "typescript", "bootstrap", "java", "spring", "nodedotjs", "express", "typeorm", "postgresql"],
     "repoUrl": "https://github.com/MarcosPatrickExe/educatoon_frontend"
   },
   {
@@ -78,7 +78,7 @@
       "Spring Data JPA + PostgreSQL para persistência, com Bean Validation",
       "Spring Boot 3.5 e Java 21, usando Lombok para reduzir boilerplate"
     ],
-    "stack": ["openjdk", "spring", "postgresql"],
+    "stack": ["java", "spring", "postgresql"],
     "repoUrl": "https://github.com/MarcosPatrickExe/Courier-Management"
   }
 ]
