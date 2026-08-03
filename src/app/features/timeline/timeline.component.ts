@@ -67,7 +67,13 @@ export class TimelineComponent implements OnInit, AfterViewInit {
     fcm: 'firebase',
   };
 
+  /** marcas sem ícone confiável no simpleicons — asset local hospedado no próprio projeto */
+  private readonly localIcons: Record<string, string> = {
+    java: 'assets/img/icons/java.png',
+  };
+
   iconUrl(slug: string): string {
+    if (this.localIcons[slug]) return this.localIcons[slug];
     const resolvedSlug = this.iconSlugOverrides[slug] ?? slug;
     return `https://cdn.simpleicons.org/${resolvedSlug}`;
   }
