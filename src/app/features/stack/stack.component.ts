@@ -24,6 +24,8 @@ export class StackComponent implements OnInit {
   /** marcas sem ícone confiável no simpleicons — asset local hospedado no próprio projeto */
   private readonly localIcons: Record<string, string> = {
     codex: 'assets/img/icons/codex.png',
+    java: 'assets/img/icons/java.png',
+    chatgpt: 'assets/img/icons/chatgpt.png',
   };
 
   ngOnInit(): void {
