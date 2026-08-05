@@ -4,13 +4,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ink: "#0A1220",
-        surface: "#0F1C30",
-        surface2: "#152B44",
-        line: "#28405F",
+        ink: "#07070A",
+        surface: "#0E0E12",
+        surface2: "#17171C",
+        line: "#2B2B32",
         teal: "#2DD4BF",
         violet: "#8B7CF6",
-        mist: "#8496AC",
+        mist: "#8B92A0",
         paper: "#E7ECEF",
       },
       fontFamily: {
