@@ -1,8 +1,10 @@
 import {
   AfterViewInit,
+  ChangeDetectorRef,
   Component,
   ElementRef,
-  HostListener,
+  NgZone,
+  OnDestroy,
   OnInit,
   QueryList,
   ViewChildren,
@@ -20,11 +22,15 @@ import { ScrollRevealDirective } from '../../core/directives/scroll-reveal.direc
   imports: [CommonModule, ScrollRevealDirective],
   templateUrl: './timeline.component.html',
 })
-export class TimelineComponent implements OnInit, AfterViewInit {
+export class TimelineComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChildren('cardEl') cardEls!: QueryList<ElementRef<HTMLElement>>;
 
   private projectsService = inject(ProjectsService);
   private host = inject(ElementRef<HTMLElement>);
+  private zone = inject(NgZone);
+  private cdRef = inject(ChangeDetectorRef);
+
+  private scrollTicking = false;
 
   projects$!: Observable<Project[]>;
   activeIndex = -1;
@@ -37,8 +43,30 @@ export class TimelineComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.cardEls.changes.subscribe(() => this.onScroll());
-    setTimeout(() => this.onScroll());
+    this.cardEls.changes.subscribe(() => this.scheduleScrollUpdate());
+    // fora da zone + agrupado por rAF: evita disparar change detection do app
+    // inteiro a cada evento nativo de scroll, que travava o fundo 3D
+    this.zone.runOutsideAngular(() => {
+      window.addEventListener('scroll', this.onWindowScroll, { passive: true });
+    });
+    this.scheduleScrollUpdate();
+  }
+
+  ngOnDestroy(): void {
+    window.removeEventListener('scroll', this.onWindowScroll);
+  }
+
+  private onWindowScroll = (): void => {
+    this.scheduleScrollUpdate();
+  };
+
+  private scheduleScrollUpdate(): void {
+    if (this.scrollTicking) return;
+    this.scrollTicking = true;
+    requestAnimationFrame(() => {
+      this.scrollTicking = false;
+      this.onScroll();
+    });
   }
 
   private readonly fallbackIcon =
@@ -93,8 +121,7 @@ export class TimelineComponent implements OnInit, AfterViewInit {
     return this.glowByIndex[index] ?? 0;
   }
 
-  @HostListener('window:scroll')
-  onScroll(): void {
+  private onScroll(): void {
     const section = this.host.nativeElement.querySelector('#projetos') as HTMLElement | null;
     if (!section) return;
 
@@ -117,5 +144,9 @@ export class TimelineComponent implements OnInit, AfterViewInit {
     });
     this.activeIndex = active;
     this.glowByIndex = glows;
+
+    // atualização fora da zone: aplica só neste componente, sem disparar
+    // change detection do app inteiro a cada frame de scroll
+    this.cdRef.detectChanges();
   }
 }
