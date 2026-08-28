@@ -28,12 +28,21 @@ export class StackComponent implements OnInit {
     chatgpt: 'assets/img/icons/chatgpt.png',
   };
 
+  /** cor padrão da marca no simpleicons é preta/quase preta e some no fundo escuro do card */
+  private readonly colorOverrides: Record<string, string> = {
+    nextdotjs: 'ffffff',
+    vercel: 'ffffff',
+    angular: 'ffffff',
+  };
+
   ngOnInit(): void {
     this.stack$ = this.projectsService.getStack();
   }
 
   iconUrl(slug: string): string {
-    return this.localIcons[slug] ?? `https://cdn.simpleicons.org/${slug}`;
+    if (this.localIcons[slug]) return this.localIcons[slug];
+    const color = this.colorOverrides[slug];
+    return color ? `https://cdn.simpleicons.org/${slug}/${color}` : `https://cdn.simpleicons.org/${slug}`;
   }
 
   /** troca por um ícone genérico se o slug não existir mais no simpleicons */
