@@ -10,7 +10,7 @@ import { ScrollRevealDirective } from '../../core/directives/scroll-reveal.direc
       <div class="max-w-3xl mx-auto px-6 md:px-10 text-center">
         <p mpReveal class="font-mono text-xs text-teal tracking-widest mb-4">// contato</p>
         <h2 mpReveal [mpRevealDelay]="0.05" class="font-display text-3xl md:text-5xl text-paper mb-6">
-          Vamos arquitetar o próximo produto.
+          vamos arquitetar o próximo produto?
         </h2>
         <p mpReveal [mpRevealDelay]="0.1" class="text-mist mb-10">
           Aberto a projetos freelance, consultoria de arquitetura e posições de tech lead.
@@ -60,7 +60,7 @@ import { ScrollRevealDirective } from '../../core/directives/scroll-reveal.direc
           class="max-w-6xl mx-auto px-6 md:px-10 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs font-mono text-mist"
         >
           <span>© 2026 Marcos Patrick — construído com Angular · Tailwind · Three.js</span>
-          <span>versão 1.8</span>
+          <span>versão 1.9</span>
         </div>
       </footer>
     </section>
@@ -73,8 +73,20 @@ export class ContactComponent {
       '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#7C8A99" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M8 12h8M12 8v8"/></svg>'
     );
 
+  /** LinkedIn foi removido do CDN do simpleicons (404) — asset local (mesma logo oficial, CC0) */
+  private readonly localIcons: Record<string, string> = {
+    linkedin: 'assets/img/icons/linkedin.svg',
+  };
+
+  /** cor padrão da marca no simpleicons é quase preta e some no fundo escuro do botão */
+  private readonly colorOverrides: Record<string, string> = {
+    github: 'ffffff',
+  };
+
   iconUrl(slug: string): string {
-    return `https://cdn.simpleicons.org/${slug}`;
+    if (this.localIcons[slug]) return this.localIcons[slug];
+    const color = this.colorOverrides[slug];
+    return color ? `https://cdn.simpleicons.org/${slug}/${color}` : `https://cdn.simpleicons.org/${slug}`;
   }
 
   /** troca por um ícone genérico se o slug não existir mais no simpleicons */
