@@ -3,16 +3,21 @@
     "tag": "01 · App de Comunidade",
     "name": "PTK Plays",
     "role": "Produto mobile ponta a ponta — app + backend",
-    "summary": "App oficial da comunidade do meu canal PTK_Joga no YouTube, multiplataforma (Android, iOS e Web). Reúne os inscritos em um só lugar para aproximá-los de mim: cada um cria sua conta e fica por dentro dos avisos sobre horários e datas das lives.",
+    "summary": "App oficial da comunidade do meu canal PTK_Joga no YouTube, publicado na App Store e na Play Store, multiplataforma (Android, iOS e Web) a partir de uma única base em Flutter/Dart. Reúne os inscritos em um só lugar para aproximá-los de mim: cada um cria sua conta, acompanha os avisos de live e conversa com quem joga junto.",
     "highlights": [
+      "Base única em Flutter/Dart para Android e iOS, com a versão web hospedada no Firebase Hosting",
       "Autenticação por email/senha e login social com Google e Apple",
-      "Feed com avisos de live — status ao vivo, datas e horários",
-      "Enquetes para a comunidade decidir o próximo jogo da live"
+      "Feed com avisos de live, comunidades por jogo (chat em tempo real) e enquetes para decidir o próximo jogo",
+      "Painel administrativo para criar badges e cargos, além de moderação com denúncias e bloqueios",
+      "Notificações push via Firebase Cloud Messaging, com suporte a tema claro e escuro"
     ],
     "stack": ["flutter", "dart", "firebase", "firestore", "fcm", "android", "apple", "youtube", "google"],
     "screenshots": [
-      { "src": "assets/img/ptk-plays/ptk-plays-login.jpg", "alt": "Tela de login do app PTK Plays" },
-      { "src": "assets/img/ptk-plays/ptk-plays-feed.jpg", "alt": "Feed de avisos e enquetes do app PTK Plays" }
+      { "src": "assets/img/ptk-plays/ptk-plays-feed.jpg", "alt": "Feed de avisos de live do app PTK Plays" },
+      { "src": "assets/img/ptk-plays/ptk-plays-comunidades.jpg", "alt": "Lista de comunidades por jogo do app PTK Plays" },
+      { "src": "assets/img/ptk-plays/ptk-plays-videos.jpg", "alt": "Aba de vídeos e lives do canal no app PTK Plays" },
+      { "src": "assets/img/ptk-plays/ptk-plays-notificacoes.jpg", "alt": "Modal de ativação de notificações do app PTK Plays" },
+      { "src": "assets/img/ptk-plays/ptk-plays-painel-adm.jpg", "alt": "Painel administrativo de badges e cargos do app PTK Plays" }
     ],
     "repoUrl": "https://github.com/MarcosPatrickExe/PTK_plays"
   },
