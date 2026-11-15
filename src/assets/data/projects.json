@@ -19,7 +19,9 @@
       { "src": "assets/img/ptk-plays/ptk-plays-notificacoes.jpg", "alt": "Modal de ativação de notificações do app PTK Plays" },
       { "src": "assets/img/ptk-plays/ptk-plays-painel-adm.jpg", "alt": "Painel administrativo de badges e cargos do app PTK Plays" }
     ],
-    "repoUrl": "https://github.com/MarcosPatrickExe/PTK_plays"
+    "repoPrivate": true,
+    "appStoreUrl": "https://apps.apple.com/us/app/ptk-plays/id6788599258",
+    "playStoreUrl": "https://play.google.com/store/apps/details?id=com.ptksolucoesdigitais.ptk_plays"
   },
   {
     "tag": "02 · Sistema de Saúde",

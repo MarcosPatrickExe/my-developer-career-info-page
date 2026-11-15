@@ -84,8 +84,29 @@
               </div>
             </div>
 
-            <div *ngIf="p.repoUrl" class="flex flex-wrap gap-3">
+            <div *ngIf="p.repoUrl || p.repoPrivate || p.appStoreUrl || p.playStoreUrl" class="flex flex-wrap gap-3">
               <a
+                *ngIf="p.appStoreUrl"
+                [href]="p.appStoreUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 text-xs font-mono px-4 py-2.5 rounded-lg border border-line text-paper hover:border-teal/50 hover:text-teal transition-colors"
+              >
+                <img [src]="iconUrl('appstore')" (error)="onIconError($event)" alt="" class="w-4 h-4" loading="lazy" />
+                App Store
+              </a>
+              <a
+                *ngIf="p.playStoreUrl"
+                [href]="p.playStoreUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 text-xs font-mono px-4 py-2.5 rounded-lg border border-line text-paper hover:border-teal/50 hover:text-teal transition-colors"
+              >
+                <img [src]="iconUrl('googleplay')" (error)="onIconError($event)" alt="" class="w-4 h-4" loading="lazy" />
+                Google Play
+              </a>
+              <a
+                *ngIf="p.repoUrl"
                 [href]="p.repoUrl"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -94,6 +115,26 @@
                 Ir para o repositório
                 <span aria-hidden="true">↗</span>
               </a>
+              <span
+                *ngIf="p.repoPrivate"
+                class="inline-flex items-center gap-2 text-xs font-mono px-4 py-2.5 rounded-lg border border-line text-mist cursor-default"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4"
+                  aria-hidden="true"
+                >
+                  <rect x="5" y="11" width="14" height="10" rx="2" />
+                  <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+                </svg>
+                repositório privado no github
+              </span>
             </div>
           </article>
         </div>
