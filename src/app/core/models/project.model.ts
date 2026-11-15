@@ -15,6 +15,12 @@ export interface Project {
   screenshots?: ProjectScreenshot[];
   /** link do repositório no GitHub, quando o projeto é público */
   repoUrl?: string;
+  /** true quando o repositório é privado — exibe um selo informativo em vez de um link */
+  repoPrivate?: boolean;
+  /** link da ficha do app na App Store, quando publicado */
+  appStoreUrl?: string;
+  /** link da ficha do app na Play Store, quando publicado */
+  playStoreUrl?: string;
 }
 
 export interface StackIcon {

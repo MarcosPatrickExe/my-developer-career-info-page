@@ -100,10 +100,18 @@ export class TimelineComponent implements OnInit, AfterViewInit, OnDestroy {
     java: 'assets/img/icons/java.png',
   };
 
+  /** cor padrão da marca no simpleicons é escura demais e some no fundo escuro do botão */
+  private readonly colorOverrides: Record<string, string> = {
+    googleplay: 'ffffff',
+  };
+
   iconUrl(slug: string): string {
     if (this.localIcons[slug]) return this.localIcons[slug];
     const resolvedSlug = this.iconSlugOverrides[slug] ?? slug;
-    return `https://cdn.simpleicons.org/${resolvedSlug}`;
+    const color = this.colorOverrides[resolvedSlug];
+    return color
+      ? `https://cdn.simpleicons.org/${resolvedSlug}/${color}`
+      : `https://cdn.simpleicons.org/${resolvedSlug}`;
   }
 
   stackLabel(slug: string): string {
